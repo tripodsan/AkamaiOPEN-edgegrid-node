@@ -1,0 +1,4 @@
+*.tgz
+.idea
+.travis.yml
+coverage
