@@ -9,7 +9,7 @@ You can find the most up-to-date package in [NPM](https://www.npmjs.com/package/
 
 > __IMPORTANT:__ Akamai will not maintain the `edgegrid` package in NPM going forward.
 
-## Installation
+## Install
 
 `npm install --save akamai-edgegrid`
 
@@ -17,7 +17,7 @@ You can find the most up-to-date package in [NPM](https://www.npmjs.com/package/
 
 ### Credentials
 
-To use Akamai APIs you must first register and authorize a set of credentials through [Control Center](https://control.akamai.com). You can find more information on creating and authorizing credentials at [Authenticate with EdgeGrid](https://developer.akamai.com/getting-started/edgegrid).
+Before you begin, you need to [Create authentication credentials](https://techdocs.akamai.com/developer/docs/set-up-authentication-credentials) in [Control Center](https://control.akamai.com).
 
 ### .edgerc authentication
 
@@ -95,9 +95,14 @@ eg.auth({
   console.log(body);
 });
 ```
+
+This is an example of an API call to [List groups in your property](https://developer.akamai.com/api/core_features/property_manager/v1.html#getgroups). Change the `path` element to reference an endpoint in any of the [Akamai APIs](https://developer.akamai.com/api).
+
 ### Headers
 
-Headers for the request must be supplied in an object as name-value pairs. You do not need to supply form-data headers or content lengths - that will cause authentication headers on the API.
+Enter request headers as name-value pairs in an object. 
+
+> **NOTE:** You don't need to include the `Content-Type` and `Content-Length` headers. The authentication layer adds these values.
 
 ```javascript
 eg.auth({
@@ -111,8 +116,7 @@ eg.auth({
 
 ### Body data
 
-The request `body` can be provided as either an object or as a POST data formed string.
-
+You can provide the request `body` as either an object or as a POST data form string.
 
 ```javascript
 // Object
@@ -128,8 +132,7 @@ eg.auth({
   
 ### Query string parameters
 
-Query string parameters must be supplied in an object as name-value pairs and 
-passed to the `auth` method under the `qs` property.
+When entering query parameters use the `qs` property under the `auth` method. Set up the parameters as name-value pairs in a object.
 
 ```javascript
 eg.auth({
