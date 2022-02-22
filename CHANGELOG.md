@@ -5,7 +5,7 @@
 #### IMPROVEMENTS:
 * Update various dependencies
 
-## BUG FIXES
+#### BUG FIXES
 * Bump axios to 0.26.0 to get rid of vulnerability in [follow-redirects](https://security.snyk.io/vuln/SNYK-JS-FOLLOWREDIRECTS-2396346)
 
 ## 3.1.2 (Nov 3, 2021)
