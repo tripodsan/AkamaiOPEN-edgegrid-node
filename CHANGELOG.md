@@ -1,5 +1,13 @@
 # RELEASE NOTES
 
+## 3.1.4 (Mar 24, 2022)
+
+#### IMPROVEMENTS:
+* Remove deprecated `moment` dependency
+
+#### BUG FIXES
+* Fix response when Content-Type is `application/gzip` ([#83](https://github.com/akamai/AkamaiOPEN-edgegrid-node/issues/83))
+
 ## 3.1.3 (Feb 22, 2022)
 
 #### IMPROVEMENTS:
