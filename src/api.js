@@ -84,6 +84,9 @@ EdgeGrid.prototype.auth = function (req) {
         this.config.access_token,
         this.config.host
     );
+    if (req.headers['Accept'] === 'application/gzip') {
+        this.request["responseType"] = 'arraybuffer';
+    }
     return this;
 };
 

@@ -221,6 +221,33 @@ describe('Api', function () {
                 assert.strictEqual(this.api.request.somethingArbitrary, 'someValue');
             });
         });
+
+        describe("when gzip response format is expected", function () {
+            beforeEach(function () {
+                this.api.auth({
+                    path: '/foo',
+                    headers: {
+                        'Accept': `application/gzip`
+                    }
+                });
+            });
+
+            it('adds an Authorization header to the request it is passed', function () {
+                assert.strictEqual(typeof this.api.request.headers.Authorization === 'string', true);
+            });
+
+            it('ensures a default GET method', function () {
+                assert.strictEqual(this.api.request.method, 'GET');
+            });
+
+            it('ensures a default empty body', function () {
+                assert.strictEqual(this.api.request.body, '');
+            });
+
+            it('should return response as buffer', function () {
+                assert.strictEqual(this.api.request["responseType"], "arraybuffer");
+            });
+        });
     });
 
     describe('#send', function () {
