@@ -1,5 +1,10 @@
 # RELEASE NOTES
 
+## 3.1.4 (??? ??, 2022)
+
+#### IMPROVEMENTS:
+* Add Typescript declaration file ([#71](https://github.com/akamai/AkamaiOPEN-edgegrid-node/issues/71))
+
 ## 3.1.4 (Mar 24, 2022)
 
 #### IMPROVEMENTS:
