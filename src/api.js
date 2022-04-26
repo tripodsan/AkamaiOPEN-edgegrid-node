@@ -90,6 +90,12 @@ EdgeGrid.prototype.auth = function (req) {
     return this;
 };
 
+/**
+ * Sends the request and invokes the callback function.
+ *
+ * @param  {Function} callback The callback function.
+ * @return EdgeGrid object (self)
+ */
 EdgeGrid.prototype.send = function (callback) {
     axios(this.request).then(response => {
         callback(null, response, JSON.stringify(response.data));
